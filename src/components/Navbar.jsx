@@ -9,6 +9,7 @@ import {
   MenuOutlined,
 } from '@ant-design/icons';
 import icon from '../media/pictures/cryptocurrency.png';
+import MenuItem from 'antd/lib/menu/MenuItem';
 
 const Navbar = () => {
   return (
@@ -20,6 +21,20 @@ const Navbar = () => {
         </Typography.Title>
         {/* <Button className="menu-control-container"></Button> */}
       </div>
+      <Menu theme="dark">
+        <MenuItem icon={<HomeOutlined />}>
+          <Link to="/">Home</Link>
+        </MenuItem>
+        <MenuItem icon={<FundOutlined />}>
+          <Link to="/cryptocurrencies">Cryptocurrencies</Link>
+        </MenuItem>
+        <MenuItem icon={<MoneyCollectOutlined />}>
+          <Link to="/exchanges">Exchanges</Link>
+        </MenuItem>
+        <MenuItem icon={<BulbOutlined />}>
+          <Link to="/news">News</Link>
+        </MenuItem>
+      </Menu>
     </div>
   );
 };
